@@ -14,7 +14,7 @@ import colors from '../styles/colors';
 //Logo
 import Logo from '../components/Logo';
 
-export default function Login() {
+export default function Login({navigation}) {
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={colors.rosa} barStyle="light-content" />
@@ -32,6 +32,7 @@ export default function Login() {
             borderRadius: 2,
             fontSize: 19,
           }}
+          autoCapitalize='none'
           placeholder="Usuário"
           placeholderTextColor={colors.rosa}
           autoCompleteType="username"
@@ -47,6 +48,7 @@ export default function Login() {
             borderRadius: 2,
             fontSize: 19,
           }}
+          secureTextEntry={true}
           placeholder="Senha"
           placeholderTextColor={colors.rosa}
           autoCompleteType="password"
@@ -79,7 +81,7 @@ export default function Login() {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => alert('Botão cadastrar')}
+          onPress={() => navigation.navigate('Register')}
           style={{
             backgroundColor: '#fff',
             borderColor: colors.rosa,
