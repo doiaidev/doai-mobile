@@ -68,7 +68,7 @@ export default function Login({navigation}) {
           <Text style={{color: '#fff', fontSize: 20}}>Entrar</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => alert('Botão esqueceu sua senha')}
+          onPress={() => navigation.navigate('ForgotPassword')}
           style={{
             backgroundColor: '#fff',
             justifyContent: 'center',
