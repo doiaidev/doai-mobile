@@ -17,7 +17,7 @@ export default function Register({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.viewSuperior}>
-        <Logo height={83} width={180} />
+        <Logo />
       </View>
       <View style={styles.viewMeio}>
         <TextInput
