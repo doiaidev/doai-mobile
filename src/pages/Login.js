@@ -9,6 +9,7 @@ import {
   KeyboardAvoidingView,
 } from 'react-native';
 
+import * as Animatable from 'react-native-animatable';
 
 //Cores
 import colors from '../styles/colors';
@@ -21,7 +22,9 @@ export default function Login({navigation}) {
     <View style={styles.container}>
       <StatusBar backgroundColor={colors.rosa} barStyle="light-content" />
       <View style={styles.viewSuperior}>
-        <Logo />
+        <Animatable.View animation='tada' delay={1000} useNativeDriver={true}>
+          <Logo />
+        </Animatable.View>
       </View>
       <View style={styles.viewMeio}>
         <TextInput
@@ -34,11 +37,11 @@ export default function Login({navigation}) {
             borderRadius: 2,
             fontSize: 19,
           }}
-          returnKeyType='next'
+          returnKeyType="next"
           autoCapitalize="none"
           placeholder="Usuário"
           placeholderTextColor={colors.rosa}
-          autoCompleteType='username'
+          autoCompleteType="username"
         />
         <TextInput
           style={{
@@ -51,7 +54,7 @@ export default function Login({navigation}) {
             borderRadius: 2,
             fontSize: 19,
           }}
-          returnKeyType='done'
+          returnKeyType="done"
           secureTextEntry={true}
           placeholder="Senha"
           placeholderTextColor={colors.rosa}
