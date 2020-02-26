@@ -22,7 +22,7 @@ export default function Login({navigation}) {
     <View style={styles.container}>
       <StatusBar backgroundColor={colors.rosa} barStyle="light-content" />
       <View style={styles.viewSuperior}>
-        <Animatable.View animation='tada' delay={1000} useNativeDriver={true}>
+        <Animatable.View animation='tada' delay={1000} useNativeDriver={true} duration={2000}>
           <Logo />
         </Animatable.View>
       </View>
@@ -39,9 +39,9 @@ export default function Login({navigation}) {
           }}
           returnKeyType="next"
           autoCapitalize="none"
-          placeholder="Usuário"
+          placeholder="Email"
           placeholderTextColor={colors.rosa}
-          autoCompleteType="username"
+          autoCompleteType='email'
         />
         <TextInput
           style={{
@@ -101,6 +101,11 @@ export default function Login({navigation}) {
           }}>
           <Text style={{color: colors.rosa, fontSize: 20}}>Cadastrar</Text>
         </TouchableOpacity>
+        <View style={{marginTop: 30}}>
+          <TouchableOpacity onPress={() => navigation.navigate('Sobre')}>
+            <Text style={{color: colors.rosa, fontSize: 17}}>Sobre</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
